@@ -1,0 +1,19 @@
+En esta carpeta esta todo el código de la página CINEXON.
+
+Esta página posee activación de cuenta por Email, pero se puede desactivar si se quiere usar en local.
+Para desactivarlo hay que bsucar en los ficheros 
+
+index.php
+core/class/Session.php
+
+Los comentarios que indican que hay que cambiar para activarlo, y hacerles caso.
+
+Por otro lado en la carpeta Scripts estarían los Scripts que deben ir en el servidor para lanzar las tareas de mantenimiento.
+Estas tareas consisten en limpiar todas las entradas cada noche, limpiar las reservadas cuando lleven en el carro 10 minutos, y borrar los usuarios
+que no se hayan activado pasadas 12 horas, adjunto código de Crontab por si se quiere utilizar así.
+
+0 0 * * * php /var/www/scripts/resetTickets.php                         Resetar las entradas a las 12
+*/5 * * * * php /var/www/scripts/resetTicketsReserved.php               Resetear las reservadas a los 10 mins de estar en el carro
+0 * * * * php /var/www/scripts/cleanAccounts.php                        Borrar cuentas noa ctivadas
+
+El fichero con el nombre db_cienxon.sql es el encargado de crear la BBDD con todas sus tablas y contenido basico.

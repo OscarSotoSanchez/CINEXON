@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card card-container">
+        <a href=".">
+            <img id="profile-img" class="profile-img-card" src="views/resource/img/logo.png" />
+        </a>
+        <p id="profile-name" class="profile-name-card">Forma parte de la mejor comunidad de cinéfilos del mundo</p>
+        <form class="form-signin" action="" method="post">
+            <div name="cuadroEmail">
+                <input type="email" name="inputEmail" class="form-control" placeholder="Email" required>
+                <div class="text-center">
+                    <label class="control-label" name="mensajeEmail" style="display:none; margin-bottom: 10px;"></label>
+                </div>
+            </div>
+            <div name="cuadroNick">
+                <input type="text" name="inputNick" class="form-control" maxlength="20" placeholder="Nick" required>
+                <div class="text-center">
+                    <label class="control-label" name="mensajeNick" style="display:none; margin-bottom: 10px;"></label>
+                </div>
+            </div>
+            <div name="cuadroNombre">
+                <input type="text" name="inputName" class="form-control" placeholder="Nombre Completo" required>
+            </div>
+            <div name="cuadroPass">
+                <input type="password" name="inputPass" class="form-control" placeholder="Contraseña" required>
+                <input type="password" name="inputPassRepeat" class="form-control" placeholder="Repetir Contraseña" required>
+                <div class="text-center">
+                    <label class="control-label" name="mensajeContra" style="display:none; margin-bottom: 10px;"></label>
+                </div>
+            </div>
+            <input type="submit" id="button" class="btn btn-lg btn-primary btn-block btn-signin disabled" value="Regístrate">
+        </form><!-- /form -->
+    </div>
+</div>
+
+<!-- Password -->
+<script src="views/resource/js/register.js"></script>
